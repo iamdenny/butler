@@ -13,8 +13,10 @@
             },
             link: function postLink(scope, element, attrs) {
                 var oChart;
+
+                var resetChart;
                 
-                $timeout(function () {
+                resetChart = function () {
                     if (scope.value) {
                         oChart = new Highcharts.Chart({
                             chart: {
@@ -55,6 +57,10 @@
                             }]
                         });
                     }
+                };
+
+                scope.$watch('value', function (newVal, oldVal) {
+                    resetChart();
                 });
                 
             }

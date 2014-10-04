@@ -16,12 +16,14 @@ html(ng-app='butler')
 
 
     script(src='bower_components/jquery/dist/jquery.min.js')
+    script(src='bower_components/moment/min/moment.min.js')
+    script(src='bower_components/moment/locale/ko.js')
+    
     script(src='bower_components/angular/angular.min.js')
     script(src='bower_components/angular-resource/angular-resource.js')
     script(src='bower_components/angular-cookies/angular-cookies.js')
     script(src='bower_components/angular-sanitize/angular-sanitize.js')
     script(src='bower_components/angular-route/angular-route.js')
-
 
     // Le HTML5 shim, for IE6-8 support of HTML5 elements
     <!--[if lt IE 9]>
@@ -52,3 +54,4 @@ html(ng-app='butler')
     script(src='javascripts/directives/uptime.js')
     script(src='javascripts/directives/gauge-chart.js')
     script(src='javascripts/directives/switches.js')
+    script(src='javascripts/services/butler-dao.js')

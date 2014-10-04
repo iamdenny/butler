@@ -11,7 +11,9 @@
                 time: '@'
             },
             link: function postLink(scope, element, attrs) {
-
+                scope.$watch('time', function (newVal, oldVal) {
+                    scope.parsedTime = moment(parseInt(newVal, 10)).fromNow();
+                });
             }
         };
     };

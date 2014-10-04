@@ -7,7 +7,7 @@
     "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit `"
   },
-  "author": "Denny Lim<hello@iamdenny.com">,
+  "author": "Denny Lim<hello@iamdenny.com>",
   "license": "MIT",
   "dependencies": {
     "express": "~4.9.x",

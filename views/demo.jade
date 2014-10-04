@@ -1,0 +1,444 @@
+extends layout
+
+block content
+    //  NAVIGATION MENU 
+    .navbar-nav.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html')
+            // img(src='assets/img/logo30.png', alt='')
+            img(src='images/butler.png', alt='butler', height='20')
+            | Butler Dashboard
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='/')
+                i.icon-home.icon-white
+                | Home
+            li
+              a(href='/')
+                i.icon-config.icon-white
+                | Setting
+            li.thumbnail
+              img.img-circle(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/t1/c31.9.112.112/p130x130/558794_10151617946204005_1242670522_n.jpg', alt='Denny Lim', style="height:50px")
+        // /.nav-collapse 
+    .container
+      // FIRST ROW OF BLOCKS 
+      .row
+        // USER PROFILE BLOCK 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle 거실
+            hr
+            .cont
+              p
+                bold 25.1℃
+                | |
+                ok Temperature
+              br
+              p
+                bold 67%
+                | |Humidity
+              br
+              p
+                bold 80%
+                | |
+                bad Light
+              br
+              p
+                bold 40%
+                | |
+                bad Dust
+        // DONUT CHART BLOCK 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle 거실 - 온도
+            hr
+            #load
+            h2 45%
+        // DONUT CHART BLOCK 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle 거실 - 습도
+            hr
+            #space
+            h2 65%
+        .col-sm-3.col-lg-3
+          // LOCAL TIME BLOCK 
+          .half-unit
+            dtitle Local Time
+            hr
+            .clockcenter
+              digiclock 12:45:25
+          // SERVER UPTIME 
+          .half-unit
+            dtitle Server Uptime
+            hr
+            .cont
+              p
+                img(src='assets/img/up.png', alt='')
+                bold Up
+                | | 356ms.
+      // /row 
+      // SECOND ROW OF BLOCKS 
+      .row
+        .col-sm-3.col-lg-3
+          // MAIL BLOCK 
+          .dash-unit
+            dtitle 큰방
+            hr
+            .cont
+              p
+                bold 25.1℃
+                | |
+                ok Temperature
+              br
+              p
+                bold 67%
+                | |Humidity
+              br
+              p
+                bold 80%
+                | |
+                bad Light
+              br
+              p
+                bold 40%
+                | |
+                bad Dust
+          // /dash-unit 
+        // /span3 
+        // GRAPH CHART - lineandbars.js file 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle Other Information
+            hr
+            .section-graph
+              #importantchart
+              br
+              .graph-info
+                i.graph-arrow
+                span.graph-info-big 634.39
+                span.graph-info-small +2.18 (3.71%)
+        // LAST MONTH REVENUE 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle 큰방
+            hr
+            .cont
+              p
+                bold 23.1℃
+                | |
+                ok Temperature
+              br
+              p
+                bold 67%
+                | |Humidity
+              br
+              p
+                bold 80%
+                | |
+                bad Light
+              br
+              p
+                bold 40%
+                | |
+                bad Dust
+              
+        // 30 DAYS STATS - CAROUSEL FLEXSLIDER 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle Last 30 Days Stats
+            hr
+            br
+            br
+            .flexslider
+              ul.slides
+                li
+                  img(src='assets/img/slide01.png', alt='slider')
+                li
+                  img(src='assets/img/slide02.png', alt='slider')
+            .cont
+              p StatCounter Information
+      // /row 
+      // THIRD ROW OF BLOCKS 
+      .row
+        .col-sm-3.col-lg-3
+          // BARS CHART - lineandbars.js file 
+          .half-unit
+            dtitle Stock Information
+            hr
+            .cont
+              .info-aapl
+                h4 AAPL
+                ul
+                  li
+                    span.orange(style='height: 37.5%;')
+                  li
+                    span.orange(style='height: 47.5%;')
+                  li
+                    span.orange(style='height: 70%;')
+                  li
+                    span.orange(style='height: 85%;')
+                  li
+                    span.green(style='height: 75%;')
+                  li
+                    span.green(style='height: 50%;')
+                  li
+                    span.green(style='height: 15%;')
+          // TO DO LIST 
+          .half-unit
+            dtitle To Do List
+            hr
+            .cont
+              p
+                bold 13
+                | | Pending Tasks
+            .progress
+              .progress-bar(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%;')
+                span.sr-only 60% Complete
+        .col-sm-3.col-lg-3
+          // LIVE VISITORS BLOCK 
+          .half-unit
+            dtitle Live Visitors
+            hr
+            .cont
+              p
+                bold 388
+              p
+                img(src='assets/img/up-small.png', alt='')
+                | 412 Max. |
+                img(src='assets/img/down-small.png', alt='')
+                | 89 Min.
+          // PAGE VIEWS BLOCK 
+          .half-unit
+            dtitle Page Views
+            hr
+            .cont
+              p
+                bold 145.0K
+              p
+                img(src='assets/img/up-small.png', alt='')
+                | 23.88%
+        .col-sm-3.col-lg-3
+          // TOTAL SUBSCRIBERS BLOCK 
+          .half-unit
+            dtitle Total Subscribers
+            hr
+            .cont
+              p
+                bold 14.744
+              p 98 Subscribed Today
+          // FOLLOWERS BLOCK 
+          .half-unit
+            dtitle Twitter Followers
+            hr
+            .cont
+              p
+                bold 17.833 Followers
+              p @SomeUser
+        // LATEST NEWS BLOCK 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle Latest News
+            hr
+            .info-user
+              span.li_news.fs2(aria-hidden='true')
+            br
+            .text
+              p
+                b Alvarez.is:
+                | A beautiful new Dashboard theme has been realised by Carlos Alvarez. Please, visit
+                a(href='http://alvarez.is') Alvarez.is
+                | for more details.
+              p
+                grey Last Update: 5 minutes ago.
+      // /row 
+      // FOURTH ROW OF BLOCKS 
+      .row
+        // TWITTER WIDGET BLOCK 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle Twitter Widget
+            hr
+            .info-user
+              span.li_megaphone.fs2(aria-hidden='true')
+            br
+            #jstwitter.clearfix
+              ul#twitter_update_list
+            script(src='http://twitter.com/javascripts/blogger.js')
+            // Script Needed to load the Tweets 
+            script(src='http://api.twitter.com/1/statuses/user_timeline/wrapbootstrap.json?callback=twitterCallback2&count=1')
+            // To show your tweets replace "wrapbootstrap", in the line above, with your user. 
+            .text
+              p
+                grey Show your tweets here!
+        // NOTIFICATIONS BLOCK 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle Notifications
+            hr
+            .info-user
+              span.li_bubble.fs2(aria-hidden='true')
+            .cont
+              p
+                button.btnnew.noty(data-noty-options='{"text":"This is a success notification","layout":"topRight","type":"success"}') Top Right
+              p
+                button.btnnew.noty(data-noty-options='{"text":"This is an informaton notification","layout":"topLeft","type":"information"}') Top Left
+              p
+                button.btnnew.noty(data-noty-options='{"text":"This is an alert notification with fade effect.","layout":"topCenter","type":"alert","animateOpen": {"opacity": "show"}}') Top Center (fade)
+        // SWITCHES BLOCK 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle Switches
+            hr
+            .info-user
+              span.li_params.fs2(aria-hidden='true')
+            br
+            .switch
+              input#on.switch-input(type='radio', name='view', value='on', checked='')
+              label.switch-label.switch-label-off(for='on') On
+              input#off.switch-input(type='radio', name='view', value='off')
+              label.switch-label.switch-label-on(for='off') Off
+              span.switch-selection
+            .switch.switch-blue
+              input#week2.switch-input(type='radio', name='view2', value='week2', checked='')
+              label.switch-label.switch-label-off(for='week2') Week
+              input#month2.switch-input(type='radio', name='view2', value='month2')
+              label.switch-label.switch-label-on(for='month2') Month
+              span.switch-selection
+            .switch.switch-yellow
+              input#yes.switch-input(type='radio', name='view3', value='yes', checked='')
+              label.switch-label.switch-label-off(for='yes') Yes
+              input#no.switch-input(type='radio', name='view3', value='no')
+              label.switch-label.switch-label-on(for='no') No
+              span.switch-selection
+        // GAUGE CHART BLOCK 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle Gauge Chart
+            hr
+            .info-user
+              span.li_lab.fs2(aria-hidden='true')
+            canvas#canvas(width='300', height='300')
+      // /row 
+      // FOURTH ROW OF BLOCKS 
+      .row
+        // ACCORDION BLOCK 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle Accordion
+            hr
+            #accordion2.accordion
+              .accordion-group
+                .accordion-heading
+                  a.accordion-toggle(data-toggle='collapse', data-parent='#accordion2', href='#collapseOne')
+                    | Collapsible Group Item #1
+                #collapseOne.accordion-body.collapse.in
+                  .accordion-inner
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem.
+              .accordion-group
+                .accordion-heading
+                  a.accordion-toggle(data-toggle='collapse', data-parent='#accordion2', href='#collapseTwo')
+                    | Collapsible Group Item #2
+                #collapseTwo.accordion-body.collapse
+                  .accordion-inner
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem.
+              .accordion-group
+                .accordion-heading
+                  a.accordion-toggle(data-toggle='collapse', data-parent='#accordion2', href='#collapseThree')
+                    | Collapsible Group Item #3
+                #collapseThree.accordion-body.collapse
+                  .accordion-inner
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem.
+            // /accordion 
+        .col-sm-3.col-lg-3
+          // LAST USER BLOCK 
+          .half-unit
+            dtitle Last Registered User
+            hr
+            .cont2
+              img(src='assets/img/user-avatar.jpg', alt='')
+              br
+              br
+              p Paul Smith
+              p
+                bold Liverpool, England
+          // MODAL BLOCK 
+          .half-unit
+            dtitle Modal
+            hr
+            .cont
+              a.btnnew(href='#myModal', role='button', data-toggle='modal') Example Modal Window
+        // Modal 
+        #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+          .modal-dialog
+            .modal-content
+              .modal-header
+                button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                h4.modal-title Modal title
+              .modal-body
+                | ...
+              .modal-footer
+                button.btn.btn-default(type='button', data-dismiss='modal') Close
+                button.btn.btn-primary(type='button') Save changes
+            // /.modal-content 
+          // /.modal-dialog 
+        // /.modal 
+        // FAST CONTACT BLOCK 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle Fast Contact
+            hr
+            .cont
+              form#contact(action='#get-in-touch', method='POST')
+                input#contactname(type='text', name='contactname', placeholder='Name')
+                input#email(type='text', name='email', placeholder='Email')
+                .textarea-container
+                  textarea#message(name='message', placeholder='Message')
+                input#submit(type='submit', name='submit', value='Send')
+        // INFORMATION BLOCK 
+        .col-sm-3.col-lg-3
+          .dash-unit
+            dtitle Block Dashboard
+            hr
+            .info-user
+              span.li_display.fs2(aria-hidden='true')
+            br
+            .text
+              p Block Dashboard created by Basicoh.
+              p Special Thanks to Highcharts, Linecons and Bootstrap for their amazing tools.
+      // /row 
+    // /container 
+    #footerwrap
+      footer.clearfix
+      .container
+        .row
+          .col-sm-12.col-lg-12
+            p
+              img(src='assets/img/logo.png', alt='')
+            p Blocks Dashboard Theme - Crafted With Love - Copyright 2013
+        // /row 
+      // /container 
+    // /footerwrap 
+
+  script(type='text/javascript', src='assets/js/noty/jquery.noty.js')
+  script(type='text/javascript', src='assets/js/noty/layouts/top.js')
+  script(type='text/javascript', src='assets/js/noty/layouts/topLeft.js')
+  script(type='text/javascript', src='assets/js/noty/layouts/topRight.js')
+  script(type='text/javascript', src='assets/js/noty/layouts/topCenter.js')
+  script(type='text/javascript', src='assets/js/noty/themes/default.js')
+
+  script(type='text/javascript', src='assets/js/lineandbars.js')
+
+  script(type='text/javascript', src='assets/js/gauge.js')
+
+  script(src='assets/js/jquery.flexslider.js', type='text/javascript')
+
+  script(type='text/javascript', src='assets/js/admin.js')
+  script(type='text/javascript', src='assets/js/dash-charts.js')
+  script(type='text/javascript', src='javascripts/main.js')

@@ -1,7 +1,54 @@
 doctype html
-html
+html(ng-app='butler')
   head
     title= title
+    meta(name='viewport',content='width=device-width, initial-scale=1.0')
     link(rel='stylesheet', href='/stylesheets/style.css')
+
+    link(href='http://fonts.googleapis.com/css?family=Raleway:400,300', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet', type='text/css')
+
+    link(href='assets/css/bootstrap.css', rel='stylesheet')
+    link(href='assets/css/main.css', rel='stylesheet')
+    link(href='assets/css/font-style.css', rel='stylesheet')
+    link(href='assets/css/flexslider.css', rel='stylesheet')
+    link(href='stylesheets/style.css', rel='stylesheet')
+
+
+    script(src='bower_components/jquery/dist/jquery.min.js')
+    script(src='bower_components/angular/angular.min.js')
+    script(src='bower_components/angular-resource/angular-resource.js')
+    script(src='bower_components/angular-cookies/angular-cookies.js')
+    script(src='bower_components/angular-sanitize/angular-sanitize.js')
+    script(src='bower_components/angular-route/angular-route.js')
+
+
+    // Le HTML5 shim, for IE6-8 support of HTML5 elements
+    <!--[if lt IE 9]>
+    script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+    <![endif]-->
   body
+    <!--[if lt IE 7]>
+    p(class="browsehappy")
+      | You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    <![endif]-->
+
     block content
+
+
+
+    // Placed at the end of the document so the pages load faster 
+    script(type='text/javascript', src='assets/js/bootstrap.js')
+    
+    script(type='text/javascript', src='http://code.highcharts.com/highcharts.js')
+    
+    script(src='javascripts/app.js')
+    script(src='javascripts/controllers/main.js')
+    script(src='javascripts/directives/navbar.js')
+    script(src='javascripts/directives/footbar.js')
+    script(src='javascripts/directives/realtime-status.js')
+    script(src='javascripts/directives/donut-chart.js')
+    script(src='javascripts/directives/local-time.js')
+    script(src='javascripts/directives/uptime.js')
+    script(src='javascripts/directives/gauge-chart.js')
+    script(src='javascripts/directives/switches.js')

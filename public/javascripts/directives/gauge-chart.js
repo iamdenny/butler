@@ -5,7 +5,7 @@
         return {
             restrict: 'EA',
             replace: true,
-            templateUrl: 'views/gauge-chart.html',
+            templateUrl: 'views/directives/gauge-chart.html',
             scope: {
                 title: '@',
                 value: '@'

@@ -1,0 +1,32 @@
+<div class="navbar-nav navbar-inverse navbar-fixed-top">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/1hour"><img class="img-circle" src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/t1/c31.9.112.112/p130x130/558794_10151617946204005_1242670522_n.jpg' alt='Denny Lim' style="height:30px"> Butler</a>
+    </div> 
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li ng-class="{'active' : period == '1hour'}"><a href="#/dashboard/1hour" ng-click="resetPeriod()"><i class="icon-home icon-white"></i> 1시간</a></li>
+          <li ng-class="{'active' : period == '3hours'}"><a href="#/dashboard/3hours" ng-click="resetPeriod()"><i class="icon-folder-open icon-white"></i> 3시간</a></li>
+          <li ng-class="{'active' : period == '6hours'}"><a href="#/dashboard/6hours" ng-click="resetPeriod()"><i class="icon-folder-open icon-white"></i> 6시간</a></li>
+          <li ng-class="{'active' : period == '12hours'}"><a href="#/dashboard/12hours" ng-click="resetPeriod()"><i class="icon-folder-open icon-white"></i> 12시간</a></li>
+          <li ng-class="{'active' : period == '1day'}"><a href="#/dashboard/1day" ng-click="resetPeriod()"><i class="icon-folder-open icon-white"></i> 1일</a></li>
+          <li ng-class="{'active' : period == '1week'}"><a href="#/dashboard/1week" ng-click="resetPeriod()"><i class="icon-folder-open icon-white"></i> 1주일</a></li>
+          <li ng-class="{'active' : period == '1month'}"><a href="#/dashboard/1month" ng-click="resetPeriod()"><i class="icon-folder-open icon-white"></i> 1달</a></li>
+          <!-- <li ng-class="{'active' : period == '/quarter'}"><a href="#/quarter"><i class="icon-folder-open icon-white"></i> 분기</a></li> -->
+          <!-- <li ng-class="{'active' : period == '/semiannual'}"><a href="#/semiannual"><i class="icon-folder-open icon-white"></i> 반기</a></li> -->
+          <li ng-class="{'active' : period == 'switches'}"><a href="#/switches"><i class="icon-folder-open icon-white"></i> 스위치</a></li>
+          <li ng-class="{'active' : period == 'setting'}"><a href="#/setting"><i class="icon-folder-open icon-white"></i> Setting</a></li>
+          <!-- <li><a href="calendar.html"><i class="icon-calendar icon-white"></i> Calendar</a></li>
+          <li><a href="tables.html"><i class="icon-th icon-white"></i> Tables</a></li>
+          <li><a href="login.html"><i class="icon-lock icon-white"></i> Login</a></li>
+          <li><a href="user.html"><i class="icon-user icon-white"></i> User</a></li> -->
+          
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+</div>

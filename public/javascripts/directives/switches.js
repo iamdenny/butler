@@ -5,7 +5,7 @@
         return {
             restrict: 'EA',
             replace: true,
-            templateUrl: 'views/switches.html',
+            templateUrl: 'views/directives/switches.html',
             scope: {
                 title: '@'
             },

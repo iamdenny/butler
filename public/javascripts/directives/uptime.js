@@ -5,14 +5,14 @@
         return {
             restrict: 'EA',
             replace: true,
-            templateUrl: 'views/uptime.html',
+            templateUrl: 'views/directives/uptime.html',
             scope: {
                 title: '@',
                 time: '@'
             },
             link: function postLink(scope, element, attrs) {
                 scope.$watch('time', function (newVal, oldVal) {
-                    scope.parsedTime = moment(parseInt(newVal, 10)).fromNow();
+                    scope.parsedTime = moment.duration( Date.now() - newVal, "milliseconds").humanize();
                 });
             }
         };

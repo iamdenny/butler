@@ -1,0 +1,70 @@
+<div class="row">
+
+    <div class="col-sm-3 col-lg-3">
+
+        <local-time title="Local Time"></local-time>
+        
+        <uptime title="Butler Uptime" time="{{butlerUptime}}"></uptime>
+
+    </div>
+
+    <div class="col-sm-3 col-lg-3">
+        <toggle-chart-status title="큰방" timetable="timetable" data="modules['큰방']"></toggle-chart-status>
+    </div>
+
+    <div class="col-sm-3 col-lg-3">
+        <toggle-chart-status title="아들방" timetable="timetable" data="modules['아들방']"></toggle-chart-status>
+    </div>
+
+    <div class="col-sm-3 col-lg-3">
+        <toggle-chart-status title="서재" timetable="timetable" data="modules['서재']"></toggle-chart-status>
+    </div>
+
+
+    <div class="col-sm-3 col-lg-3">
+        <toggle-chart-status title="거실" timetable="timetable" data="modules['거실']"></toggle-chart-status>
+    </div>
+
+    <div class="col-sm-3 col-lg-3">
+        <toggle-chart-status title="주방" timetable="timetable" data="modules['주방']"></toggle-chart-status>
+    </div>
+
+    <div class="col-sm-3 col-lg-3">
+        <toggle-chart-status title="앞 배란다" timetable="timetable" data="modules['앞 배란다']"></toggle-chart-status>
+    </div>
+
+    <div class="col-sm-3 col-lg-3">
+        <toggle-chart-status title="뒷 배란다" timetable="timetable" data="modules['뒷 배란다']"></toggle-chart-status>
+    </div>
+
+
+    <div class="col-sm-3 col-lg-3">
+        <toggle-chart-status title="화장실" timetable="timetable" data="modules['화장실']"></toggle-chart-status>
+    </div>
+
+    <div class="col-sm-3 col-lg-3">
+        <toggle-chart-status title="안방 화장실" timetable="timetable" data="modules['안방 화장실']"></toggle-chart-status>
+    </div>
+
+    <div class="col-sm-3 col-lg-3">
+    	<toggle-donut-stacked-area title="점유율" timetable="timetable" data="mergedData.motion"></toggle-donut-stacked-area>
+    </div>
+
+
+    <div class="col-sm-3 col-lg-3">
+        <highcharts-with-data-labels title="전체 온도 현황" timetable="timetable" data="mergedData.temperature" prefix="°C"></highcharts-with-data-labels>
+    </div>
+
+    <div class="col-sm-3 col-lg-3">
+        <highcharts-with-data-labels title="전체 습도 현황" timetable="timetable" data="mergedData.humidity" prefix="%"></highcharts-with-data-labels>
+    </div>
+
+    <div class="col-sm-3 col-lg-3">
+        <highcharts-with-data-labels title="전체 조도 현황" timetable="timetable" data="mergedData.light" prefix="%"></highcharts-with-data-labels>
+    </div>
+
+    <div class="col-sm-3 col-lg-3">
+        <highcharts-with-data-labels title="전체 미세먼지 현황" timetable="timetable" data="mergedData.dust" prefix="㎍/㎥"></highcharts-with-data-labels>
+    </div>
+
+</div>

@@ -5,11 +5,10 @@
         return {
             restrict: 'EA',
             replace: true,
-            templateUrl: 'views/donut-chart.html',
+            templateUrl: 'views/directives/donut-chart.html',
             scope: {
                 title: '@',
-                value: '@',
-                color: '@'
+                data: '='
             },
             link: function postLink(scope, element, attrs) {
                 var oChart;
@@ -17,14 +16,13 @@
                 var resetChart;
                 
                 resetChart = function () {
-                    if (scope.value) {
+                    if (scope.data) {
                         oChart = new Highcharts.Chart({
                             chart: {
                                 renderTo: element.find('.chart').get(0),
                                 margin: [0, 0, 0, 0],
                                 backgroundColor: null,
-                                plotBackgroundColor: 'none',
-                                            
+                                plotBackgroundColor: 'none'
                             },
                             
                             title: {
@@ -46,8 +44,17 @@
                                 name: 'Income',
                                 innerSize: '65%',
                                 data: [
-                                    { name: scope.title, y: parseInt(scope.value,10), color: scope.color },
-                                    { name: 'rest', y: (100 - parseInt(scope.value,10)), color: '#3d3d3d' }
+                                    // { name: scope.title, y: parseInt(scope.value,10), color: scope.color },
+                                    // { name: 'rest', y: (100 - parseInt(scope.value,10)), color: '#3d3d3d' }
+                                    { name: '큰방', y: 20, color: 'purple' },
+                                    { name: '아들방', y: 10, color: 'blue' },
+                                    { name: '서재', y: 10, color: 'red' },
+                                    { name: '거실', y: 30, color: 'green' },
+                                    { name: '주방', y: 5, color: 'brown' },
+                                    { name: '앞 배란다', y: 5, color: 'yellow' },
+                                    { name: '뒷 배란다', y: 5, color: 'gray' },
+                                    { name: '화장실', y: 10, color: 'black' },
+                                    { name: '안방 화장실', y: 5, color: 'white' }
                                 ],
                                 dataLabels: {
                                     enabled: false,
@@ -59,7 +66,7 @@
                     }
                 };
 
-                scope.$watch('value', function (newVal, oldVal) {
+                scope.$watch('data', function (newVal, oldVal) {
                     resetChart();
                 });
                 

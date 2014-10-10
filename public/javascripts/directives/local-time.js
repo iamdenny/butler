@@ -5,7 +5,7 @@
         return {
             restrict: 'EA',
             replace: true,
-            templateUrl: 'views/local-time.html',
+            templateUrl: 'views/directives/local-time.html',
             scope: {
                 title: '@'
             },

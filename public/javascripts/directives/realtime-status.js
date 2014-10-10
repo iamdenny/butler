@@ -5,7 +5,7 @@
         return {
             restrict: 'EA',
             replace: true,
-            templateUrl: 'views/realtime-status.html',
+            templateUrl: 'views/directives/realtime-status.html',
             scope: {
                 title: '@',
                 temperature: '@',

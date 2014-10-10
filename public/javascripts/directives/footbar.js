@@ -5,7 +5,7 @@
         return {
             restrict: 'EA',
             replace: true,
-            templateUrl: 'views/footbar.html',
+            templateUrl: 'views/directives/footbar.html',
             scope: {},
             link: function postLink(scope, element, attrs) {
 

@@ -9,11 +9,11 @@
 		// initialize variables of methods
 		var load, getLastStatusByName;
 
-		load = function (cb) {
-			$http.get('/data').success(function(d) {
-		      data = d;
-		      console.log('data', d);
-		      cb(d);
+		load = function (period, cb) {
+			$http.get('/ajax/data/' + period).success(function(originalData) {
+		      data = originalData;
+		      console.log('data', originalData);
+		      cb(originalData);
 		    });
 		};
 

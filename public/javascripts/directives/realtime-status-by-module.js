@@ -1,11 +1,11 @@
 (function () {
 	'use strict';
 
-	var realtimeStatus = function () {
+	var realtimeStatusByModule = function () {
         return {
             restrict: 'EA',
             replace: true,
-            templateUrl: 'views/directives/realtime-status.html',
+            templateUrl: 'views/directives/realtime-status-by-module.html',
             scope: {
                 title: '@',
                 temperature: '@',
@@ -20,6 +20,6 @@
     };
 
 	angular.module('butler')
-	    .directive('realtimeStatus', realtimeStatus);
+	    .directive('realtimeStatusByModule', realtimeStatusByModule);
 
 })();

@@ -1,4 +1,7 @@
 <div style="position: relative;">
+	<div style="position:absolute;top:5px;right:5px;z-index:1;color:#fff">
+		<span class="glyphicon glyphicon-transfer"></span>
+	</div>
 	<realtime-status title="{{title}}" temperature="{{lastData.temperature}}℃" humidity="{{lastData.humidity}}%" light="{{lastData.light}}%" dust="{{lastData.dust}}%" ng-show="showRealtime" ng-click="showRealtime=!showRealtime"></realtime-status>
 	<highcharts-mixed-chart title="{{title}}" ng-hide="showRealtime" ng-click="showRealtime=!showRealtime" timetable="timetable" data="data"></highcharts-mixed-chart>
 </div>

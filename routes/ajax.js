@@ -39,63 +39,126 @@ router.get('/data/:period', function(req, res) {
 				humidity: getRandom(40, 80),
 				light: getRandom(30, 90),
 				dust: getRandom(40, 60),
-				motion: getRandom(0, 100)
+				motion: getRandom(0, 100),
+				current: {
+					temperature: random(18, 26),
+					humidity: random(40, 80),
+					light: random(30, 90),
+					dust: random(40, 60),
+					motion: random(0, 100)
+				}
 			},
 			'아들방': {
 				temperature: getRandom(18, 26),
 				humidity: getRandom(40, 80),
 				light: getRandom(30, 90),
 				dust: getRandom(40, 60),
-				motion: getRandom(0, 100)
+				motion: getRandom(0, 100),
+				current: {
+					temperature: random(18, 26),
+					humidity: random(40, 80),
+					light: random(30, 90),
+					dust: random(40, 60),
+					motion: random(0, 100)
+				}
 			},
 			'서재': {
 				temperature: getRandom(18, 26),
 				humidity: getRandom(40, 80),
 				light: getRandom(30, 90),
 				dust: getRandom(40, 60),
-				motion: getRandom(0, 100)
+				motion: getRandom(0, 100),
+				current: {
+					temperature: random(18, 26),
+					humidity: random(40, 80),
+					light: random(30, 90),
+					dust: random(40, 60),
+					motion: random(0, 100)
+				}
 			},
 			'거실': {
 				temperature: getRandom(18, 26),
 				humidity: getRandom(40, 80),
 				light: getRandom(30, 90),
 				dust: getRandom(40, 60),
-				motion: getRandom(0, 100)
+				motion: getRandom(0, 100),
+				current: {
+					temperature: random(18, 26),
+					humidity: random(40, 80),
+					light: random(30, 90),
+					dust: random(40, 60),
+					motion: random(0, 100)
+				}
 			},
 			'주방': {
 				temperature: getRandom(18, 26),
 				humidity: getRandom(40, 80),
 				light: getRandom(30, 90),
 				dust: getRandom(40, 60),
-				motion: getRandom(0, 100)
+				motion: getRandom(0, 100),
+				current: {
+					temperature: random(18, 26),
+					humidity: random(40, 80),
+					light: random(30, 90),
+					dust: random(40, 60),
+					motion: random(0, 100)
+				}
 			},
 			'앞 배란다': {
 				temperature: getRandom(18, 26),
 				humidity: getRandom(40, 80),
 				light: getRandom(30, 90),
 				dust: getRandom(40, 60),
-				motion: getRandom(0, 100)
+				motion: getRandom(0, 100),
+				current: {
+					temperature: random(18, 26),
+					humidity: random(40, 80),
+					light: random(30, 90),
+					dust: random(40, 60),
+					motion: random(0, 100)
+				}
 			},
 			'뒷 배란다': {
 				temperature: getRandom(18, 26),
 				humidity: getRandom(40, 80),
 				light: getRandom(30, 90),
 				dust: getRandom(40, 60),
-				motion: getRandom(0, 100)
+				motion: getRandom(0, 100),
+				current: {
+					temperature: random(18, 26),
+					humidity: random(40, 80),
+					light: random(30, 90),
+					dust: random(40, 60),
+					motion: random(0, 100)
+				}
 			},
 			'화장실': {
 				temperature: getRandom(18, 26),
 				humidity: getRandom(40, 80),
 				light: getRandom(30, 90),
 				dust: getRandom(40, 60),
-				motion: getRandom(0, 100)
+				motion: getRandom(0, 100),
+				current: {
+					temperature: random(18, 26),
+					humidity: random(40, 80),
+					light: random(30, 90),
+					dust: random(40, 60),
+					motion: random(0, 100)
+				}
 			},
 			'안방 화장실': {
 				temperature: getRandom(18, 26),
 				humidity: getRandom(40, 80),
 				light: getRandom(30, 90),
 				dust: getRandom(40, 60),
-				motion: getRandom(0, 100)
+				motion: getRandom(0, 100),
+				current: {
+					temperature: random(18, 26),
+					humidity: random(40, 80),
+					light: random(30, 90),
+					dust: random(40, 60),
+					motion: random(0, 100)
+				}
 			}
 		}
 	};

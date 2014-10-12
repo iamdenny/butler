@@ -233,9 +233,21 @@ h5 {
 .cont ok {
 	color:#b2c831;
 }
-
 .cont bad {
 	color:#fa1d2d;
+}
+
+.cont temperature {
+	color:rgb(119, 152, 191);
+}
+.cont humidity {
+	color:rgb(43, 144, 143);
+}
+.cont light {
+	color:rgb(144, 238, 126);
+}
+.cont dust {
+	color:rgb(244, 91, 91);
 }
 
 .cont2 {

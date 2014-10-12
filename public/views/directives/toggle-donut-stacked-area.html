@@ -1,4 +1,7 @@
 <div style="position: relative;">
+	<div style="position:absolute;top:5px;right:5px;z-index:1;color:#fff">
+		<span class="glyphicon glyphicon-transfer"></span>
+	</div>
 	<donut-chart title="{{title}}" data="lastData" color="#b2c831" ng-show="showRealtime" ng-click="showRealtime=!showRealtime"></donut-chart>
 	<highcharts-area-stacked-percent title="{{title}}" tabletable="timetable" data="data" ng-hide="showRealtime" ng-click="showRealtime=!showRealtime"></highcharts-area-stacked-percent>
 </div>

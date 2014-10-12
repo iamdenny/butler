@@ -16,12 +16,12 @@
                     var diffTime = moment().diff(uptime, 'minutes'),
                         dateString = '';
                     if (diffTime > 60 * 24) {
-                        var days = (diffTime / (60 * 24));
+                        var days = Math.ceil(diffTime / (60 * 24));
                         dateString += days + '일';
                         diffTime -= days * 60 * 24;
                     }
                     if (diffTime > 60) {
-                        var hours = (diffTime / 60);
+                        var hours = Math.ceil(diffTime / 60);
                         dateString += hours + '시간';
                         diffTime -= hours * 60;
                     }

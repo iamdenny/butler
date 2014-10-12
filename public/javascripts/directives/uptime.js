@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	var uptime = function () {
+	var uptime = function ($timeout) {
         return {
             restrict: 'EA',
             replace: true,
@@ -11,8 +11,32 @@
                 time: '@'
             },
             link: function postLink(scope, element, attrs) {
+                var resetUptime = function (uptime) {
+                    if (!angular.isNumber(uptime)) return;
+                    var diffTime = moment().diff(uptime, 'minutes'),
+                        dateString = '';
+                    if (diffTime > 60 * 24) {
+                        var days = (diffTime / (60 * 24));
+                        dateString += days + '일';
+                        diffTime -= days * 60 * 24;
+                    }
+                    if (diffTime > 60) {
+                        var hours = (diffTime / 60);
+                        dateString += hours + '시간';
+                        diffTime -= hours * 60;
+                    }
+                    if (diffTime > 0) {
+                        dateString += diffTime + '분';
+                    }
+                    scope.parsedTime = dateString;
+
+                    $timeout(function() {
+                        resetUptime(uptime);
+                    }, 1000 * 60);
+                };
+
                 scope.$watch('time', function (newVal, oldVal) {
-                    scope.parsedTime = moment.duration( Date.now() - newVal, "milliseconds").humanize();
+                    resetUptime(parseInt(newVal, 10));
                 });
             }
         };

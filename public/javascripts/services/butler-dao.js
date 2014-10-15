@@ -7,7 +7,7 @@
 		var data;
 
 		// initialize variables of methods
-		var load, getLastStatusByName;
+		var load, getLastStatusByName, scanBluetooth, loadFoundBluetooth;
 
 		load = function (period, cb) {
 			$http.get('/ajax/data/' + period).success(function(originalData) {
@@ -33,9 +33,31 @@
 			return {};
 		};
 
+		scanBluetooth = function (cb) {
+			$http.get('/ajax/scanBluetooth')
+				.success(function (bluetoothModules) {
+					cb(bluetoothModules);
+				})
+				.error(function (err) {
+					console.log('err', err);
+				});
+		};
+
+		loadFoundBluetooth = function (cb) {
+			$http.get('/ajax/loadFoundBluetooth')
+				.success(function (bluetoothModules) {
+					cb(bluetoothModules);
+				})
+				.error(function (err) {
+					console.log('err', err);
+				});
+		};
+
 		return {
 			load: load,
-			getLastStatusByName: getLastStatusByName
+			getLastStatusByName: getLastStatusByName,
+			scanBluetooth: scanBluetooth,
+			loadFoundBluetooth: loadFoundBluetooth
 		};
 	};
 

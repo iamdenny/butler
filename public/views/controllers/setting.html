@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="col-sm-6 col-lg-6">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">블루투스 검색 <button type="button" class="btn btn-default" ng-click="scan()">Scan</button></h3>
+		  </div>
+		  <div class="panel-body">
+		    <div class="list-group">
+			  <a ng-repeat="bluetooth in bluetoothList" href class="list-group-item">{{bluetooth.name}} : {{bluetooth.address}} <button type="button" class="btn btn-default" ng-click="connect(bluetooth)">연결</button></a>			  
+			</div>
+		  </div>
+		</div>
+	</div>
+</div>

@@ -1,8 +1,46 @@
 var express = require('express');
 var router = express.Router();
 var os = require('os');
+var btSerial = new (require('bluetooth-serial-port')).BluetoothSerialPort();
 
 var butlerUptime = Date.now();
+
+var isScanning = false,
+	foundBlutooth = {
+		process: 'scanning',
+		list: []
+	};
+
+btSerial.on('found', function(address, name) {
+	console.log('found', address, name);
+	foundBlutooth.process = 'scanning';
+	foundBlutooth.list.push({
+		address: address,
+		name: name
+	});
+});
+btSerial.on('finished', function () {
+	console.log('finished');
+	foundBlutooth.process = 'done';
+	isScanning = false;
+});
+
+router.get('/scanBluetooth', function (req, res) {
+	if (!isScanning) {
+		isScanning = true;	
+		foundBlutooth.process = 'scanning';
+		foundBlutooth.list = [];
+		
+		res.type('application/json').json(foundBlutooth);
+		
+		btSerial.inquire();  	
+
+	}
+});
+
+router.get('/loadFoundBluetooth', function (req, res) {
+	res.type('application/json').json(foundBlutooth);
+});
 
 
 router.get('/data/:period', function(req, res) {

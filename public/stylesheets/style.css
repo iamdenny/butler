@@ -7,7 +7,8 @@ text[text-anchor='end'] {
 }
 
 div.navbar-nav {
-	margin: 0 0 0 15px;
+	margin: 0;
+	padding-left: 15px;
 }
 
 .navbar-brand {

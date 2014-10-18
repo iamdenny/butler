@@ -1,5 +1,35 @@
 <div class="row">
 
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	        <h4 class="modal-title">모듈 등록</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form role="form">
+			  <div class="form-group">
+			    <label for="inputModuelName">모듈 이름</label>
+			    <input type="text" class="form-control" id="inputModuelName" placeholder="모듈 이름">
+			  </div>
+			  <div class="form-group">
+			    <label for="inputModelSelection">모델명</label>
+			    <select id="inputModelSelection" name="inputModelSelection" class="form-control">
+			    	<option value="">모델 선택</option>
+			    	<option value="DNY01">DNY01</option>
+			    </select>
+			  </div>
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+	        <button type="button" class="btn btn-primary">추가</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
 	<div class="col-sm-6 col-lg-6">
 		<div class="panel panel-default">
 		  <div class="panel-heading">
@@ -7,11 +37,33 @@
 		    	<button type="button" class="btn btn-info" ng-click="scan()" style="position:absolute;top:2px;right:25px;">Scan</button>
 		    </h3>
 		  </div>
-		  <table class="table">
-		  	<tbody>
+		  <table class="table table-hover">
+		  	<thead>
 		  		<tr>
+		  			<th>#</th>
+		  			<th>블루투스명</th>
+		  			<th></th>
+		  		</tr>
+		  	</thead>
+		  	<tbody>
+		  		<tr ng-repeat="bluetooth in bluetoothList">
 		  			<td>
-			  			<a ng-repeat="bluetooth in bluetoothList" href class="list-group-item">{{bluetooth.name}} : {{bluetooth.address}} <button type="button" class="btn btn-default" ng-click="connect(bluetooth)">연결</button></a>	
+		  				{{$index+1}}
+		  			</td>
+		  			<td>
+			  			{{bluetooth.name}} : {{bluetooth.address}}
+			  		</td>
+			  		<td>
+			  			<button type="button" class="btn btn-default" ng-click="connect(bluetooth)">연결</button>
+			  		</td>
+			  	</tr>
+			  	<tr>
+			  		<td>1</td>
+			  		<td>
+			  			Test Bluetooth
+			  		</td>
+			  		<td>
+			  			<button type="button" class="btn btn-xs btn-success" data-toggle="modal" data-target="#myModal">연결</button>
 			  		</td>
 			  	</tr>
 			</tbody>

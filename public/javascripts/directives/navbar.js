@@ -11,6 +11,7 @@
             link: function postLink(scope, element, attrs) {
                 
                 scope.resetPeriod = function () {
+                    // $('.navbar-collapse').collapse('toggle');
                     $timeout(function () {
                         scope.period = $routeParams.period;
                     });

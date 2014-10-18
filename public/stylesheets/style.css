@@ -5,3 +5,12 @@ body {
 text[text-anchor='end'] {
 	display:none;
 }
+
+.navbar-nav {
+	margin: 0 15px;
+}
+
+.navbar-brand {
+	padding: 0;
+	line-height: 50px
+}

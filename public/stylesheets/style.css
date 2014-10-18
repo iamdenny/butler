@@ -6,8 +6,8 @@ text[text-anchor='end'] {
 	display:none;
 }
 
-.navbar-nav {
-	margin: 0 15px;
+div.navbar-nav {
+	margin: 0 0 0 15px;
 }
 
 .navbar-brand {

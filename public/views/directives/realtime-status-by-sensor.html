@@ -7,11 +7,19 @@
 				{{name}} : {{val}} {{prefix}}
 			</li>
 		</ul> -->
-		<dl class="dl-horizontal">
+<!-- 		<dl class="dl-horizontal">
 			<sensor ng-repeat="sensor in data" style="line-height:25px;">
 				<dt style="line-height:24px;width:130px">{{sensor.name}}</dt>
 				<dd style="line-height:24px;margin-left:0px">{{sensor.value}} {{prefix}}</dd>
 			</sensor>
-		</dl>
+		</dl> -->
+		<table class="table">
+			<tbody>
+				<tr ng-repeat="sensor in data" style="line-height:25px;">
+					<td>{{sensor.name}}</td>
+					<td>{{sensor.value}} {{prefix}}</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>

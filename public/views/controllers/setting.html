@@ -1,14 +1,64 @@
 <div class="row">
+
 	<div class="col-sm-6 col-lg-6">
 		<div class="panel panel-default">
 		  <div class="panel-heading">
-		    <h3 class="panel-title">블루투스 검색 <button type="button" class="btn btn-default" ng-click="scan()">Scan</button></h3>
+		    <h3 class="panel-title">블루투스 검색 
+		    	<button type="button" class="btn btn-info" ng-click="scan()" style="position:absolute;top:2px;right:25px;">Scan</button>
+		    </h3>
 		  </div>
-		  <div class="panel-body">
-		    <div class="list-group">
-			  <a ng-repeat="bluetooth in bluetoothList" href class="list-group-item">{{bluetooth.name}} : {{bluetooth.address}} <button type="button" class="btn btn-default" ng-click="connect(bluetooth)">연결</button></a>			  
-			</div>
-		  </div>
+		  <table class="table">
+		  	<tbody>
+		  		<tr>
+		  			<td>
+			  			<a ng-repeat="bluetooth in bluetoothList" href class="list-group-item">{{bluetooth.name}} : {{bluetooth.address}} <button type="button" class="btn btn-default" ng-click="connect(bluetooth)">연결</button></a>	
+			  		</td>
+			  	</tr>
+			</tbody>
+		  </table>
 		</div>
 	</div>
+
+	<div class="col-sm-6 col-lg-6">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">연결된 모듈</h3>
+		  </div>
+		  <table class="table">
+		  	<thead>
+		  		<tr>
+		  			<th>#</th>
+		  			<th>이름</th>
+		  			<th>블루투스명</th>
+		  			<th>모델명</th>
+		  			<th></th>
+		  		</tr>
+		  	</thead>
+		  	<tbody>
+		  		<tr>
+			  		<td>1</td>
+			  		<td>큰방</td>
+			  		<td>DennyBT01</td>
+			  		<td>DNY01</td>
+			  		<td><button type="button" class="btn btn-xs btn-danger">제거</button></td>
+			  	</tr>
+		  		<tr>
+			  		<td>2</td>
+			  		<td>아들방</td>
+			  		<td>DennyBT02</td>
+			  		<td>DNY01</td>
+			  		<td><button type="button" class="btn btn-xs btn-danger">제거</button></td>
+			  	</tr>
+		  		<tr>
+			  		<td>3</td>
+			  		<td>서재</td>
+			  		<td>DennyBT03</td>
+			  		<td>DNY01</td>
+			  		<td><button type="button" class="btn btn-xs btn-danger">제거</button></td>
+			  	</tr>
+			</tbody>
+		  </table>
+		</div>
+	</div>
+
 </div>

@@ -20,3 +20,9 @@ div.navbar-nav {
 	padding: 2px;
 	border: none;
 }
+
+@media (min-width: 768px) {
+	.container {
+		width: auto;
+	}
+}

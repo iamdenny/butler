@@ -19,8 +19,8 @@
           <li ng-class="{'active' : period == '1month'}"><a href="#/dashboard/1month" ng-click="resetPeriod()" data-toggle="collapse" data-target=".navbar-collapse"><i class="icon-folder-open icon-white"></i> 1달</a></li>
           <!-- <li ng-class="{'active' : period == '/quarter'}"><a href="#/quarter"><i class="icon-folder-open icon-white"></i> 분기</a></li> -->
           <!-- <li ng-class="{'active' : period == '/semiannual'}"><a href="#/semiannual"><i class="icon-folder-open icon-white"></i> 반기</a></li> -->
-          <li ng-class="{'active' : period == 'switches'}"><a href="#/switches" data-toggle="collapse" data-target=".navbar-collapse"><i class="icon-folder-open icon-white"></i> 스위치</a></li>
-          <li ng-class="{'active' : period == 'setting'}"><a href="#/setting" data-toggle="collapse" data-target=".navbar-collapse"><i class="icon-folder-open icon-white"></i> Setting</a></li>
+          <li ng-class="{'active' : period == 'switches'}"><a href="#/switches" ng-click="resetPeriod()" data-toggle="collapse" data-target=".navbar-collapse"><i class="icon-folder-open icon-white"></i> 스위치</a></li>
+          <li ng-class="{'active' : period == 'setting'}"><a href="#/setting" ng-click="resetPeriod()" data-toggle="collapse" data-target=".navbar-collapse"><i class="icon-folder-open icon-white"></i> Setting</a></li>
           <!-- <li><a href="calendar.html"><i class="icon-calendar icon-white"></i> Calendar</a></li>
           <li><a href="tables.html"><i class="icon-th icon-white"></i> Tables</a></li>
           <li><a href="login.html"><i class="icon-lock icon-white"></i> Login</a></li>
